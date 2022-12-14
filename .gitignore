@@ -3,3 +3,6 @@
 
 # Hugo build lock
 .hugo_build.lock
+
+# Local Hugo build folder
+public
