@@ -1,3 +1,6 @@
 [submodule "themes/lynx"]
 	path = themes/lynx
 	url = https://github.com/jpanther/lynx.git
+[submodule "terraform"]
+	path = terraform
+	url = git@github.com:m4xwellmorris/maxwellmorrisme-tf.git
