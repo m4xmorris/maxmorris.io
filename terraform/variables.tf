@@ -1,7 +1,5 @@
-# API Tokens (set at CLI)
 variable "do_token" {}
 variable "cloudflare_token" {}
-
 variable "site_name" {}
 variable "description" {}
 variable "environment" {}
