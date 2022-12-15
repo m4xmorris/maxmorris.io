@@ -1,14 +1,12 @@
 baseURL = "https://maxwellmorris.me/"
 languageCode = "en"
 defaultContentLanguage = "en"
-
+enableEmoji = true
+disableKinds = ["taxonomy", "term"]
 theme = "lynx"
 
 title = "Maxwell Morris"
 copyright = "Copy, _right?_ :thinking_face:"
-
-enableEmoji = true
-disableKinds = ["taxonomy", "term"]
 
 [author]
   name = "Maxwell Morris"
@@ -16,42 +14,11 @@ disableKinds = ["taxonomy", "term"]
   image = "me.jpg"  # path relative to static directory
 
   links = [
-    # { email = "mailto:hello@your_domain.com" },
     { link = { href = "https://maxwellmorris.me/cv.pdf", text = "CV" } },
-    # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
-    # { apple = "https://www.apple.com" },
-    # { codepen = "https://codepen.io/username" },
-    # { dev = "https://dev.to/username" },
-    # { discord = "https://discord.gg/invitecode" },
-    # { dribbble = "https://dribbble.com/username" },
-    # { facebook = "https://facebook.com/username" },
-    # { flickr = "https://www.flickr.com/photos/username/" },
-    # { foursquare = "https://foursquare.com/username" },
     { github = "https://github.com/m4xwellmorris" },
-    # { gitlab = "https://gitlab.com/username" },
-    # { google = "https://www.google.com/" },
-    # { instagram = "https://instagram.com/username" },
-    # { keybase = "https://keybase.io/username" },
-    # { kickstarter = "https://www.kickstarter.com/profile/username" },
-    # { lastfm = "https://lastfm.com/user/username" },
     { linkedin = "https://linkedin.com/in/maxwell-morris-728030212" },
-    # { mastodon = "https://mastodon.instance/@username" },
-    # { medium = "https://medium.com/username" },
-    # { microsoft = "https://www.microsoft.com/" },
-    # { patreon = "https://www.patreon.com/username" },
-    # { pinterest = "https://pinterest.com/username" },
-    # { reddit = "https://reddit.com/user/username" },
-    # { slack = "https://workspace.url/team/userid" },
     { snapchat = "https://snapchat.com/add/max_morris01" },
-    # { soundcloud = "https://soundcloud.com/username" },
-    # { steam = "https://steamcommunity.com/profiles/userid" },
     { telegram = "https://t.me/m4xm0rris" },
-    # { tiktok = "https://tiktok.com/@username" },
-    # { tumblr = "https://username.tumblr.com" },
-    # { twitch = "https://twitch.tv/username" },
-    # { twitter = "https://twitter.com/username" },
-    # { whatsapp = "https://wa.me/phone-number" },
-    # { youtube = "https://youtube.com/username" },
   ]
 
 [module]
