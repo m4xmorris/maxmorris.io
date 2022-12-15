@@ -1,14 +1,14 @@
 terraform {
   cloud {
     organization = "kyan-consulting"
-    workspaces {name = "maxwellmorrisme"}
+    workspaces { name = "maxwellmorrisme" }
   }
   required_providers {
     digitalocean = {
       source = "digitalocean/digitalocean"
     }
     cloudflare = {
-      source  = "cloudflare/cloudflare"
+      source = "cloudflare/cloudflare"
     }
   }
 }
