@@ -1,7 +1,7 @@
 resource "cloudflare_page_rule" "delete_www" {
   zone_id  = var.cloudflare_zone_id
   target   = "www.${var.domain}/*"
-  priority = 2
+  priority = 1
 
   actions {
     forwarding_url {
