@@ -4,7 +4,9 @@ variable "site_name" {}
 variable "description" {}
 variable "environment" {}
 variable "domain" {}
+variable "domain_old" {}
 variable "cloudflare_zone_id" {}
+variable "cloudflare_zone_id_old" {}
 variable "source_repo" {}
 variable "source_branch" {}
 variable "source_dir" {}
