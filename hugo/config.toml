@@ -10,7 +10,7 @@ copyright = "Copy, _right?_ :thinking_face:"
 
 [author]
   name = "Maxwell Morris"
-  headline = "IT Consultant from Bristol, UK"
+  headline = "IT Consultant"
   image = "me.jpg"  # path relative to static directory
 
   links = [
