@@ -4,11 +4,11 @@ resource "digitalocean_app" "site_app" {
     region = "lon"
     domain {
       name = var.domain
-      type = PRIMARY
+      type = "PRIMARY"
     }
     domain {
       name = var.domain_old
-      type = ALIAS
+      type = "ALIAS"
     }
 
     alert { rule = "DEPLOYMENT_FAILED" }
