@@ -12,7 +12,7 @@ resource "cloudflare_page_rule" "delete_www" {
 }
 
 resource "cloudflare_page_rule" "delete_www_old" {
-  zone_id  = var.cloudflare_zone_id
+  zone_id  = var.cloudflare_zone_id_old
   target   = "www.${var.domain_old}/*"
   priority = 1
 
