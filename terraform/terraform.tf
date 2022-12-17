@@ -1,7 +1,7 @@
 terraform {
   cloud {
     organization = "kyan-consulting"
-    workspaces { name = "maxwellmorrisme" }
+    workspaces { name = "maxmorrisio" }
   }
   required_providers {
     digitalocean = {
