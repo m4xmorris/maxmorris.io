@@ -47,6 +47,27 @@ resource "cloudflare_record" "mail_spf" {
   type       = "TXT"
   ttl        = 3600
 }
+resource "cloudflare_record" "mail_dkim_1" {
+  zone_id    = var.cloudflare_zone_id
+  name       = "protonmail._domainkey"
+  value      = "protonmail.domainkey.dbjm65arcatqxgwv5qlkmggadpqlpbr6lbnpz6y64qtpfm474d3fq.domains.proton.ch."
+  type       = "CNAME"
+  ttl        = 3600
+}
+resource "cloudflare_record" "mail_dkim_2" {
+  zone_id    = var.cloudflare_zone_id
+  name       = "protonmail2._domainkey"
+  value      = "protonmail2.domainkey.dbjm65arcatqxgwv5qlkmggadpqlpbr6lbnpz6y64qtpfm474d3fq.domains.proton.ch."
+  type       = "CNAME"
+  ttl        = 3600
+}
+resource "cloudflare_record" "mail_dkim_3" {
+  zone_id    = var.cloudflare_zone_id
+  name       = "protonmail3._domainkey"
+  value      = "protonmail3.domainkey.dbjm65arcatqxgwv5qlkmggadpqlpbr6lbnpz6y64qtpfm474d3fq.domains.proton.ch."
+  type       = "CNAME"
+  ttl        = 3600
+}
 
 # Website records (old domain)
 resource "cloudflare_record" "root_record_old" {
