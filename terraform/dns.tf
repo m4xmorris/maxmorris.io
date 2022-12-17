@@ -9,7 +9,7 @@ resource "cloudflare_record" "root_record" {
 }
 resource "cloudflare_record" "www_record" {
   zone_id    = var.cloudflare_zone_id
-  name       = "www.${var.domain}"
+  name       = "www"
   value      = replace(digitalocean_app.site_app.default_ingress, "/(https://)|(/)/", "")
   type       = "CNAME"
   ttl        = 3600
@@ -68,6 +68,13 @@ resource "cloudflare_record" "mail_dkim_3" {
   type       = "CNAME"
   ttl        = 3600
 }
+resource "cloudflare_record" "mail_dmarc" {
+  zone_id    = var.cloudflare_zone_id
+  name       = "_dmarc"
+  value      = "v=DMARC1; p=quarantine"
+  type       = "TXT"
+  ttl        = 3600
+}
 
 # Website records (old domain)
 resource "cloudflare_record" "root_record_old" {
@@ -80,7 +87,7 @@ resource "cloudflare_record" "root_record_old" {
 }
 resource "cloudflare_record" "www_record_old" {
   zone_id    = var.cloudflare_zone_id_old
-  name       = "www.${var.domain_old}"
+  name       = "www"
   value      = replace(digitalocean_app.site_app.default_ingress, "/(https://)|(/)/", "")
   type       = "CNAME"
   ttl        = 3600
