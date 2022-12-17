@@ -10,16 +10,3 @@ resource "cloudflare_page_rule" "delete_www" {
     }
   }
 }
-
-resource "cloudflare_page_rule" "delete_www_old" {
-  zone_id  = var.cloudflare_zone_id_old
-  target   = "www.${var.domain_old}/*"
-  priority = 1
-
-  actions {
-    forwarding_url {
-      url         = "https://${var.domain_old}/$1"
-      status_code = "301"
-    }
-  }
-}
