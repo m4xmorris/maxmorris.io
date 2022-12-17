@@ -22,6 +22,22 @@ resource "cloudflare_record" "mail_verify_record" {
   type       = "TXT"
   ttl        = 3600
 }
+resource "cloudflare_record" "mail_record_1" {
+  zone_id    = var.cloudflare_zone_id
+  name       = var.domain
+  value      = "mail.protonmail.ch"
+  type       = "MX"
+  priority   = "10"
+  ttl        = 3600
+}
+resource "cloudflare_record" "mail_record_2" {
+  zone_id    = var.cloudflare_zone_id
+  name       = var.domain
+  value      = "mailsec.protonmail.ch"
+  type       = "MX"
+  priority   = "20"
+  ttl        = 3600
+}
 
 resource "cloudflare_record" "root_record_old" {
   zone_id    = var.cloudflare_zone_id_old
