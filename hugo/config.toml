@@ -14,8 +14,8 @@ copyright = "Copy, _right?_ :thinking_face:"
   image = "me.jpg"  # path relative to static directory
 
   links = [
-    { email = "mailto:site@maxmorris.io" },
     { link = { href = "https://maxmorris.io/cv.pdf", text = "CV" } },
+    { email = "mailto:site@maxmorris.io" },
     { github = "https://github.com/m4xwellmorris" },
     { linkedin = "https://linkedin.com/in/maxwell-morris-728030212" },
     { telegram = "https://t.me/m4xm0rris" },
