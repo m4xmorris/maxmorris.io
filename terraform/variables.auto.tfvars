@@ -1,6 +1,6 @@
 site_name = "maxmorrisio-staging"
 description = "Personal Website"
-environment = "Production"
+environment = "Development"
 domain = "staging.maxmorris.io"
 source_repo = "maxmorrisio/personal-site"
 source_branch = "staging"
