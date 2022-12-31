@@ -1,4 +1,4 @@
-module "do-apps-tf" {
+module "do_apps_tf" {
 	source = "./do-apps-tf"
 	site_name = "maxmorrisio-staging"
 	description = "Personal Website"
