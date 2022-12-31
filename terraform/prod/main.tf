@@ -1,5 +1,5 @@
 module "do-apps-tf" {
-	source = "../do-apps-tf"
+	source = "./do-apps-tf"
 	site_name = "maxmorrisio"
 	description = "Personal Website"
 	environment = "Production"
