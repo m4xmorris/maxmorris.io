@@ -1,19 +1,3 @@
-# Website records
-resource "cloudflare_record" "root_record" {
-  zone_id    = var.cloudflare_zone_id
-  name       = "@"
-  value      = replace(digitalocean_app.site_app.default_ingress, "/(https://)|(/)/", "")
-  type       = "CNAME"
-  depends_on = [digitalocean_app.site_app]
-}
-resource "cloudflare_record" "www_record" {
-  zone_id    = var.cloudflare_zone_id
-  name       = "www"
-  value      = replace(digitalocean_app.site_app.default_ingress, "/(https://)|(/)/", "")
-  type       = "CNAME"
-  depends_on = [digitalocean_app.site_app]
-}
-
 # Mail service records
 resource "cloudflare_record" "mail_verify" {
   zone_id    = var.cloudflare_zone_id

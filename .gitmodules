@@ -1,3 +1,10 @@
 [submodule "themes/lynx"]
 	path = hugo/themes/lynx
 	url = https://github.com/jpanther/lynx.git
+[submodule "terraform/prod/do-apps-tf"]
+	path = terraform/prod/do-apps-tf
+	url = https://github.com/maxmorrisio/do-apps-tf.git
+[submodule "terraform/dev/do-apps-tf"]
+	path = terraform/dev/do-apps-tf
+	url = https://github.com/maxmorrisio/do-apps-tf.git
+	branch = dev
