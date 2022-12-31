@@ -3,6 +3,7 @@ module "do-apps-tf" {
 	site_name = "maxmorrisio"
 	description = "Personal Website"
 	environment = "Production"
+	region = "lon"
 	domain = "maxmorris.io"
 	source_repo = "maxmorrisio/personal-site"
 	source_branch = "main"
