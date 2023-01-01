@@ -1,5 +1,5 @@
 module "do_apps_tf" {
-	source = "./do-apps-tf"
+	source = "github.com/maxmorrisio/do-apps-tf.git?ref=dev"
 	site_name = "maxmorrisio-dev"
 	description = "Personal Website"
 	environment = "Development"
