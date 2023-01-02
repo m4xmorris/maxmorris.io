@@ -1,11 +1,11 @@
 module "static_site" {
 	source = "github.com/m4xmorris/do-apps-tf.git?ref=v1.0.0"
-	site_name = "maxmorris_io"
+	site_name = "maxmorrisio"
 	description = "Personal Website"
 	environment = "Production"
 	region = "lon"
 	domain = "maxmorris.io"
-	source_repo = "m4xmorris/maxmorris_io"
+	source_repo = "m4xmorris/maxmorris.io"
 	source_branch = "main"
 	preview_source_branch = "dev"
 	source_dir = "hugo"
