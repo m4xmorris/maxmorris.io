@@ -1,5 +1,5 @@
 module "static_site" {
-	source = "github.com/m4xmorris/do-apps-tf.git?ref=v1.0.0"
+	source = "github.com/m4xmorris/do-apps-tf.git?ref=v2.0.0"
 	site_name = "maxmorrisio"
 	description = "Personal Website"
 	environment = "Production"
@@ -11,7 +11,8 @@ module "static_site" {
 	source_dir = "hugo"
 	output_dir = "public"
 	build_command = "hugo -d public"
+	do_token = "${var.do_token}"
+	manage_dns = true
 	cloudflare_zone_id = "${var.cloudflare_zone_id}"
 	cloudflare_token = "${var.cloudflare_token}"
-	do_token = "${var.do_token}"
 }
