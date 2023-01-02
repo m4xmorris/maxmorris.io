@@ -1,7 +1,7 @@
 terraform {
   cloud {
     organization = "kyan-consulting"
-    workspaces { name = "maxmorris_io" }
+    workspaces { name = "maxmorrisio" }
   }
   required_providers {
     cloudflare = {
