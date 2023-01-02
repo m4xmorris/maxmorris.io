@@ -1,11 +1,11 @@
-module "do_apps_tf" {
-	source = "github.com/maxmorrisio/do-apps-tf.git"
-	site_name = "maxmorrisio"
+module "static_site" {
+	source = "github.com/m4xmorris/do-apps-tf.git?ref=v1.0.0"
+	site_name = "maxmorris_io"
 	description = "Personal Website"
 	environment = "Production"
 	region = "lon"
 	domain = "maxmorris.io"
-	source_repo = "maxmorrisio/personal-site"
+	source_repo = "maxmorrisio/maxmorris_io"
 	source_branch = "main"
 	preview_source_branch = "dev"
 	source_dir = "hugo"
