@@ -5,7 +5,7 @@ module "static_site" {
 	environment = "Production"
 	region = "lon"
 	domain = "maxmorris.io"
-	source_repo = "maxmorrisio/maxmorris_io"
+	source_repo = "m4xmorris/maxmorris_io"
 	source_branch = "main"
 	preview_source_branch = "dev"
 	source_dir = "hugo"
