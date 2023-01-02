@@ -1,5 +1,5 @@
-module "do_apps_tf" {
-	source = "github.com/maxmorrisio/do-apps-tf.git"
+module "static_site" {
+	source = "github.com/maxmorrisio/do-apps-tf.git?ref=v1.0.0"
 	site_name = "maxmorrisio"
 	description = "Personal Website"
 	environment = "Production"
