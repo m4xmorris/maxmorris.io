@@ -1,5 +1,5 @@
 module "static_site" {
-	source = "github.com/m4xmorris/do-apps-tf.git?ref=v2.0.0"
+	source = "github.com/m4xmorris/terraform-digitalocean-static-site.git?ref=v2.0.1"
 	site_name = "maxmorrisio"
 	description = "Personal Website"
 	environment = "Production"
