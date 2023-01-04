@@ -23,7 +23,6 @@ module "static_site" {
 	source_dir = "hugo"
 	output_dir = "public"
 	build_command = "hugo -d public"
-	do_token = "${var.do_token}"
 	manage_dns = true
 	cloudflare_zone_id = "${var.cloudflare_zone_id}"
 }
