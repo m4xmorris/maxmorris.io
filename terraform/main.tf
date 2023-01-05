@@ -26,12 +26,3 @@ module "static_site" {
 	manage_dns = true
 	cloudflare_zone_id = "${var.cloudflare_zone_id}"
 }
-
-module "test" {
-  source  = "m4xmorris/dns-record/cloudflare"
-  version = "1.1.0"
-  cloudflare_zone_id = "${var.cloudflare_zone_id}"
-  name = "test"
-  type = "A"
-  value = "1.1.1.1"
-}
