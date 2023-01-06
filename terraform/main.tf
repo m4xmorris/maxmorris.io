@@ -11,15 +11,16 @@ module "protonmail" {
 
 module "static_site" {
 	source = "m4xmorris/static-site/digitalocean"
-	version = "1.0.0"
+	version = "1.1.0"
 	site_name = "maxmorrisio"
 	description = "Personal Website"
 	environment = "Production"
 	region = "lon"
 	domain = "maxmorris.io"
 	source_repo = "m4xmorris/maxmorris.io"
-	source_branch = "main"
-	preview_source_branch = "dev"
+	source_branches = {
+		"main" = "/"
+	}
 	source_dir = "hugo"
 	output_dir = "public"
 	build_command = "hugo -d public"
