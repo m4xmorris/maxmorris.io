@@ -21,7 +21,6 @@ module "static_site" {
 	source_branches = {
 		"main" = "/"
 	}
-	preview_source_branch = "dev"
 	source_dir = "hugo"
 	output_dir = "public"
 	build_command = "hugo -d public"
