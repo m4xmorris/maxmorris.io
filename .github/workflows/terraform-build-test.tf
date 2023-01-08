@@ -1,10 +1,10 @@
 terraform {
   required_providers {
     cloudflare = {
-        source  = "cloudflare/cloudflare"
+      source = "cloudflare/cloudflare"
     }
     digitalocean = {
-        source = "digitalocean/digitalocean"
+      source = "digitalocean/digitalocean"
     }
   }
 }
@@ -18,9 +18,9 @@ provider "digitalocean" {
 }
 
 module "maxmorrisio" {
-  source  = "../../terraform"
+  source             = "../../terraform"
   cloudflare_zone_id = "null"
-  cloudflare_token = "nullnullnullnullnullnullnullnullnullnull"
-  do_token = "null"
-  
+  cloudflare_token   = "nullnullnullnullnullnullnullnullnullnull"
+  do_token           = "null"
+
 }
