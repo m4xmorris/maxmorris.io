@@ -11,7 +11,7 @@ module "protonmail" {
 
 module "static_site" {
 	source = "m4xmorris/static-site/digitalocean"
-	version = "1.1.0"
+	version = "1.2.0"
 	site_name = "maxmorrisio"
 	description = "Personal Website"
 	environment = "Production"
@@ -26,4 +26,10 @@ module "static_site" {
 	build_command = "hugo -d public"
 	manage_dns = true
 	cloudflare_zone_id = "${var.cloudflare_zone_id}"
+	alert_policy = [
+		"DOMAIN_LIVE",
+		"DEPLOYMENT_LIVE",
+		"DOMAIN_FAILED",
+		"DEPLOYMENT_FAILED"
+	]
 }
