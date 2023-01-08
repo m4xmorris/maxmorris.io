@@ -1,6 +1,6 @@
 module "protonmail" {
   source              = "m4xmorris/protonmail/cloudflare"
-  version             = "1.1.0"
+  version             = "1.1.1"
   cloudflare_zone_id  = var.cloudflare_zone_id
   domain              = "maxmorris.io"
   verification_record = "protonmail-verification=87a1d2b07ad3698186abeb79feeceb9f19833a81"
