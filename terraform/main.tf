@@ -11,7 +11,7 @@ module "protonmail" {
 
 module "static_site" {
   source      = "m4xmorris/static-site/digitalocean"
-  version     = "1.2.0"
+  version     = "1.2.1"
   site_name   = "maxmorrisio"
   description = "Personal Website"
   environment = "Production"
