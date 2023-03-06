@@ -20,7 +20,6 @@ module "static_site" {
   source_repo = "m4xmorris/maxmorris.io"
   source_branches = {
     "main"             = "/"
-    "add-booking-link" = "/preview"
   }
   source_dir         = "hugo"
   output_dir         = "public"
