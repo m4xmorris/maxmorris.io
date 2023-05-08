@@ -35,4 +35,5 @@ override.tf.json
 .hugo_build.lock
 
 # Local Hugo build folder
-public
+hugo/public/
+hugo/resources/
