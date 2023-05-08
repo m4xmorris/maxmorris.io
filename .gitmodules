@@ -1,4 +1,4 @@
-[submodule "themes/lynx"]
+[submodule "hugo/themes/lynx"]
 	path = hugo/themes/lynx
 	url = https://github.com/jpanther/lynx.git
 	branch = v1.2.4
