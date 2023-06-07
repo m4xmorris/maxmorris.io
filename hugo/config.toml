@@ -15,6 +15,7 @@ copyright = "Copy, _right?_ :thinking_face:"
 
   links = [
     { link = { href = "https://maxmorris.io/cv.pdf", text = "CV" } },
+    { link = { href = "https://monzo.me/maxwellmorris", text = "Pay" } },
     { email = "mailto:site@maxmorris.io" },
     { linkedin = "https://linkedin.com/in/maxwell-morris-728030212" },
     { github = "https://github.com/m4xmorris" },
