@@ -11,12 +11,12 @@ copyright = "Copy, _right?_ :thinking_face:"
 [author]
   name = "Maxwell Morris"
   headline = "IT Consultant / Bristol, UK"
-  image = "me.jpg"  # path relative to static directory
+  image = "me.jpg"
 
   links = [
     { link = { href = "https://maxmorris.io/cv.pdf", text = "CV" } },
-    { link = { href = "https://monzo.me/maxwellmorris", text = "Pay" } },
     { email = "mailto:site@maxmorris.io" },
+    { pay = { href = "https://monzo.me/maxwellmorris", text = "Pay" } },
     { linkedin = "https://linkedin.com/in/maxwell-morris-728030212" },
     { github = "https://github.com/m4xmorris" },
     { telegram = "https://t.me/m4xm0rris" },
@@ -24,5 +24,5 @@ copyright = "Copy, _right?_ :thinking_face:"
 
 [module]
   [module.hugoVersion]
-    extended = false
+    extended = true
     min = "0.86.1"
