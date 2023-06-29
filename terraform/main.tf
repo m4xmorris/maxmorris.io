@@ -23,7 +23,7 @@ module "static_site" {
   }
   env_variables = {
     "HUGO_VERSION" = "0.110.0"
-    "A_TEST_VAR" = "a test value"
+    "A_TEST_VAR"   = "a test value"
   }
   source_dir         = "hugo"
   output_dir         = "public"
