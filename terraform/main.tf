@@ -11,7 +11,7 @@ module "protonmail" {
 
 module "static_site" {
   source      = "m4xmorris/static-site/digitalocean"
-  version     = "1.2.1"
+  version     = "1.3.0"
   site_name   = "maxmorrisio"
   description = "Personal Website"
   environment = "Production"
@@ -20,6 +20,10 @@ module "static_site" {
   source_repo = "m4xmorris/maxmorris.io"
   source_branches = {
     "main" = "/"
+  }
+  env_variables = {
+    "HUGO_VERSION" = "0.110.0"
+    "A_TEST_VAR"   = "a test value"
   }
   source_dir         = "hugo"
   output_dir         = "public"
