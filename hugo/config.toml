@@ -15,11 +15,11 @@ copyright = "Copy, _right?_ :thinking_face:"
 
   links = [
     { link = { href = "https://maxmorris.io/cv.pdf", text = "CV" } },
-    { email = "mailto:site@maxmorris.io" },
-    { pay = { href = "https://monzo.me/maxwellmorris", text = "Pay" } },
     { linkedin = "https://linkedin.com/in/maxwell-morris-728030212" },
+    { email = "mailto:site@maxmorris.io" },
     { github = "https://github.com/m4xmorris" },
     { telegram = "https://t.me/m4xm0rris" },
+    { steam = "https://steamcommunity.com/id/m4xm0rris" },
   ]
 
 [module]
