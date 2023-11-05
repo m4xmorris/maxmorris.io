@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "kyan-consulting"
+    organization = "morrislan"
     workspaces { name = "maxmorrisio" }
   }
   required_providers {
