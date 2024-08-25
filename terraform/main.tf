@@ -10,14 +10,15 @@ module "protonmail" {
 }
 
 module "static_site" {
-  source      = "m4xmorris/static-site/digitalocean"
-  version     = "1.3.1"
-  site_name   = "maxmorrisio"
-  description = "Personal Website"
-  environment = "Production"
-  region      = "lon"
-  domain      = "maxmorris.io"
-  source_repo = "m4xmorris/maxmorris.io"
+  source           = "m4xmorris/static-site/digitalocean"
+  version          = "1.3.2"
+  site_name        = "maxmorrisio"
+  external_project = "59dfbb4b-504a-4004-bdb4-c4452e35aa8d"
+  description      = "Personal Website"
+  environment      = "Production"
+  region           = "lon"
+  domain           = "maxmorris.io"
+  source_repo      = "m4xmorris/maxmorris.io"
   source_branches = {
     "main" = "/"
   }
