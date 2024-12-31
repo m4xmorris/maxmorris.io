@@ -105,9 +105,43 @@ jobs:
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !BuildImageStep
     name: docker-build-homepage
-    buildPath: apps/homepage
+    buildPath: hugo/
     output: !RegistryOutput
       tags: '@server_host@/maxmorris.io/homepage:latest'
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  triggers:
+  - !BranchUpdateTrigger
+    branches: main
+  jobDependencies:
+  - jobName: hugo-build-homepage
+    requireSuccessful: true
+    artifacts: '**'
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  timeout: 14400
+- name: hugo-build-homepage
+  steps:
+  - !CheckoutStep
+    name: checkout
+    cloneCredential: !DefaultCredential {}
+    withLfs: true
+    withSubmodules: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: hugo-build
+    runInContainer: true
+    image: hugomods/hugo:latest
+    interpreter: !DefaultInterpreter
+      commands: |
+        cd hugo
+        hugo -d public
+    useTTY: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !PublishArtifactStep
+    name: homepage-html
+    sourcePath: hugo/public
+    artifacts: '*'
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
   - !BranchUpdateTrigger
