@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: maxmorris-io-site
+  name: maxmorris-io
   namespace: argocd
 spec:
   project: default
   sources:
      - repoURL: 'https://git.morrislan.net/maxmorris.io'
        targetRevision: main
-       path: 'site/k8s'
+       path: 'k8s'
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: maxmorris-io
