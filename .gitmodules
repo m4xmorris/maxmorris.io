@@ -1,0 +1,4 @@
+[submodule "site/hugo/themes/lynx"]
+	path = site/hugo/themes/lynx
+	url = https://github.com/jpanther/lynx.git
+	branch = v1.3.0
