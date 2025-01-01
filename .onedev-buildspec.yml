@@ -104,7 +104,6 @@ jobs:
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !BuildImageStep
     name: docker-build
-    buildPath: site/
     output: !RegistryOutput
       tags: '@server_host@/maxmorris.io/site:latest'
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
@@ -115,7 +114,7 @@ jobs:
   - jobName: build-site-hugo
     requireSuccessful: true
     artifacts: '**'
-    destinationPath: site/hugo/public
+    destinationPath: hugo/public
   retryCondition: never
   maxRetries: 3
   retryDelay: 30
@@ -134,13 +133,13 @@ jobs:
     image: hugomods/hugo:exts-0.140.0
     interpreter: !DefaultInterpreter
       commands: |
-        cd site/hugo
+        cd hugo
         hugo -d public
     useTTY: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !PublishArtifactStep
     name: export-html
-    sourcePath: site/hugo/public
+    sourcePath: hugo/public
     artifacts: '**'
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
