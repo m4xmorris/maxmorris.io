@@ -1,7 +1,7 @@
 resource "cloudflare_record" "verification" {
   zone_id = var.cloudflare_zone_id
-  name    = maxmorris.io
-  content   = "protonmail-verification=87a1d2b07ad3698186abeb79feeceb9f19833a81"
+  name    = "maxmorris.io"
+  content = "protonmail-verification=87a1d2b07ad3698186abeb79feeceb9f19833a81"
   type    = "TXT"
 }
 
@@ -11,7 +11,7 @@ resource "cloudflare_record" "mx" {
     "20" = "mailsec.protonmail.ch"
   }
   zone_id  = var.cloudflare_zone_id
-  name     = maxmorris.io
+  name     = "maxmorris.io"
   value    = each.value
   type     = "MX"
   priority = each.key
@@ -31,8 +31,8 @@ resource "cloudflare_record" "dkim" {
 
 resource "cloudflare_record" "spf" {
   zone_id = var.cloudflare_zone_id
-  name    = maxmorris.io
-  content   = "v=spf1 include:_spf.protonmail.ch mx ~all"
+  name    = "maxmorris.io"
+  content = "v=spf1 include:_spf.protonmail.ch mx ~all"
   type    = "TXT"
 }
 
