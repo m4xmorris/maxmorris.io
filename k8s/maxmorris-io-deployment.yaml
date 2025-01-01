@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: maxmorris-io-site
+  name: maxmorris-io
   namespace: maxmorris-io
   labels:
-    app: maxmorris-io-site
+    app: maxmorris-io
 spec:
   selector:
     matchLabels:
-      app: maxmorris-io-site
+      app: maxmorris-io
   template:
     metadata:
       labels:
-        app: maxmorris-io-site
+        app: maxmorris-io
     spec:
       containers:
       - name: site
