@@ -105,7 +105,7 @@ jobs:
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !BuildImageStep
     name: docker-build
-    buildPath: site/hugo/
+    buildPath: site/
     output: !RegistryOutput
       tags: '@server_host@/maxmorris.io/site:latest'
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
