@@ -151,7 +151,7 @@ jobs:
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !PublishArtifactStep
     name: public-artifact
-    sourcePath: hugo/public
+    sourcePath: hugo
     artifacts: public.tar
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
