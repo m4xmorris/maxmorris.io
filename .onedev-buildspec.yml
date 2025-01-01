@@ -145,8 +145,8 @@ jobs:
     image: hugomods/hugo:exts-0.111.3
     interpreter: !DefaultInterpreter
       commands: |
-        hugo --configDir hugo -d public
-        tar -cvf public.tar public/
+        cd hugo
+        hugo -d public && tar -cvf public.tar public/
     useTTY: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !PublishArtifactStep
