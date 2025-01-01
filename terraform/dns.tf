@@ -39,6 +39,6 @@ resource "cloudflare_record" "spf" {
 resource "cloudflare_record" "dmarc" {
   zone_id = var.cloudflare_zone_id
   name    = "_dmarc.maxmorris.io"
-  value   = "v=DMARC1; p=quarantine"
+  content = "v=DMARC1; p=quarantine"
   type    = "TXT"
 }
