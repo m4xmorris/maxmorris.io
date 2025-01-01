@@ -25,7 +25,7 @@ resource "cloudflare_record" "dkim" {
   }
   zone_id = var.cloudflare_zone_id
   name    = "${each.key}.maxmorris.io"
-  value   = each.value
+  content = each.value
   type    = "CNAME"
 }
 
