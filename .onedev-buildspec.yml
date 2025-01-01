@@ -103,6 +103,16 @@ jobs:
     withLfs: true
     withSubmodules: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: ls
+    runInContainer: false
+    interpreter: !DefaultInterpreter
+      commands: |
+        ls -al
+        la -al hugo/
+        ls -al hugo/public/
+    useTTY: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !BuildImageStep
     name: docker-build-homepage
     buildPath: hugo/
