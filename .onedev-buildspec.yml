@@ -105,7 +105,8 @@ jobs:
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !CommandStep
     name: ls
-    runInContainer: false
+    runInContainer: true
+    image: busybox
     interpreter: !DefaultInterpreter
       commands: |
         ls -al
