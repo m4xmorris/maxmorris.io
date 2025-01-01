@@ -132,7 +132,7 @@ jobs:
   - !CommandStep
     name: hugo-build
     runInContainer: true
-    image: hugomods/hugo:exts-0.111.3
+    image: hugomods/hugo:exts-0.140.0
     interpreter: !DefaultInterpreter
       commands: |
         cd site/hugo
