@@ -116,7 +116,7 @@ jobs:
   - jobName: build-site-hugo
     requireSuccessful: true
     artifacts: '**'
-    destinationPath: hugo/public
+    destinationPath: site/hugo/public
   retryCondition: never
   maxRetries: 3
   retryDelay: 30
