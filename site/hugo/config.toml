@@ -8,7 +8,7 @@ theme = "lynx"
 title = "Maxwell Morris"
 copyright = "Copy, _right?_ :thinking_face:"
 
-[author]
+[params.author]
   name = "Maxwell Morris"
   headline = "IT Consultant / Bristol, UK"
   image = "me.jpg"
