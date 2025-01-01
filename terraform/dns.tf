@@ -12,7 +12,7 @@ resource "cloudflare_record" "mx" {
   }
   zone_id  = var.cloudflare_zone_id
   name     = "maxmorris.io"
-  value    = each.value
+  content  = each.value
   type     = "MX"
   priority = each.key
 }
