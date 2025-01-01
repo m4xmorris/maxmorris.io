@@ -95,7 +95,7 @@ jobs:
   maxRetries: 3
   retryDelay: 30
   timeout: 14400
-- name: build-homepage-docker
+- name: build-site-docker
   steps:
   - !CheckoutStep
     name: checkout
@@ -107,13 +107,13 @@ jobs:
     name: docker-build
     buildPath: hugo/
     output: !RegistryOutput
-      tags: '@server_host@/maxmorris.io/homepage:latest'
+      tags: '@server_host@/maxmorris.io/site:latest'
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
   - !BranchUpdateTrigger
     branches: main
   jobDependencies:
-  - jobName: build-homepage-hugo
+  - jobName: build-site-hugo
     requireSuccessful: true
     artifacts: '**'
     destinationPath: hugo/public
@@ -121,7 +121,7 @@ jobs:
   maxRetries: 3
   retryDelay: 30
   timeout: 14400
-- name: build-homepage-hugo
+- name: build-site-hugo
   steps:
   - !CheckoutStep
     name: checkout
@@ -135,13 +135,13 @@ jobs:
     image: hugomods/hugo:exts-0.111.3
     interpreter: !DefaultInterpreter
       commands: |
-        cd hugo
+        cd site/hugo
         hugo -d public
     useTTY: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !PublishArtifactStep
     name: export-html
-    sourcePath: hugo/public
+    sourcePath: site/hugo/public
     artifacts: '*'
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:

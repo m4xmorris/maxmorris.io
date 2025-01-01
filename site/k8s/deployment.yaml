@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maxmorris-io-site
+  namespace: maxmorris-io
+  labels:
+    app: maxmorris-io-site
+spec:
+  selector:
+    matchLabels:
+      app: maxmorris-io-site
+  template:
+    metadata:
+      labels:
+        app: maxmorris-io-site
+    spec:
+      containers:
+      - name: site
+        image: git.morrislan.net/maxmorris.io/site:latest 
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: maxmorris-io-site
+  namespace: maxmorris-io
+  labels:
+    app: maxmorris-io-site
+spec:
+  selector:
+    app: maxmorris-io-site
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
