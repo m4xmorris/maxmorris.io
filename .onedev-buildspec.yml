@@ -142,7 +142,7 @@ jobs:
   - !PublishArtifactStep
     name: export-html
     sourcePath: site/hugo/public
-    artifacts: '*/*'
+    artifacts: '**'
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
   - !BranchUpdateTrigger
