@@ -145,14 +145,14 @@ jobs:
     image: hugomods/hugo:exts-0.111.3
     interpreter: !DefaultInterpreter
       commands: |
-        cd hugo
-        hugo -d public
+        hugo --configDir hugo -d public
+        tar -cvf public.tar public/
     useTTY: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !PublishArtifactStep
-    name: homepage-html
+    name: public-artifact
     sourcePath: hugo/public
-    artifacts: '*'
+    artifacts: public.tar
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
   - !BranchUpdateTrigger
