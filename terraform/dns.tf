@@ -1,7 +1,7 @@
 resource "cloudflare_record" "verification" {
   zone_id = var.cloudflare_zone_id
   name    = "maxmorris.io"
-  content = "protonmail-verification=87a1d2b07ad3698186abeb79feeceb9f19833a81"
+  content = "protonmail-verification=5993e65ff674db7b6745100cd97e06698dcc283a"
   type    = "TXT"
 }
 
