@@ -19,9 +19,9 @@ resource "cloudflare_record" "mx" {
 
 resource "cloudflare_record" "dkim" {
   for_each = {
-    "protonmail._domainkey"  = "protonmail.domainkey.dbjm65arcatqxgwv5qlkmggadpqlpbr6lbnpz6y64qtpfm474d3fq.domains.proton.ch"
-    "protonmail2._domainkey" = "protonmail2.domainkey.dbjm65arcatqxgwv5qlkmggadpqlpbr6lbnpz6y64qtpfm474d3fq.domains.proton.ch"
-    "protonmail3._domainkey" = "protonmail3.domainkey.dbjm65arcatqxgwv5qlkmggadpqlpbr6lbnpz6y64qtpfm474d3fq.domains.proton.ch"
+    "protonmail._domainkey"  = "protonmail.domainkey.dlseeyalb5k3uigjadpjecvfoycnpej5akx4q47qxxomsmqciwwdq.domains.proton.ch"
+    "protonmail2._domainkey" = "protonmail2.domainkey.dlseeyalb5k3uigjadpjecvfoycnpej5akx4q47qxxomsmqciwwdq.domains.proton.ch"
+    "protonmail3._domainkey" = "protonmail3.domainkey.dlseeyalb5k3uigjadpjecvfoycnpej5akx4q47qxxomsmqciwwdq.domains.proton.ch"
   }
   zone_id = var.cloudflare_zone_id
   name    = "${each.key}.maxmorris.io"
