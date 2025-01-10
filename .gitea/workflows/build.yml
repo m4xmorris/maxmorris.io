@@ -28,7 +28,7 @@ jobs:
         run: hugo -d public
       
       - name: Export HTML
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           path: hugo/public
           if-no-files-found: error
