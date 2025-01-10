@@ -30,6 +30,7 @@ jobs:
       - name: Export HTML
         uses: actions/upload-artifact@v3
         with:
+          name: html
           path: hugo/public
           if-no-files-found: error
           retention-days: 7
@@ -40,6 +41,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Get HTML
+        uses: actions/download-artifact@v3
+        with:
+          name: html
+          path: hugo/public
 
       - name: Import Secrets
         uses: hashicorp/vault-action@v3
