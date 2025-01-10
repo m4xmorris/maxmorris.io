@@ -33,3 +33,35 @@ jobs:
           path: hugo/public
           if-no-files-found: error
           retention-days: 7
+
+  podman:
+    name: "Podman Build"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Import Secrets
+        uses: hashicorp/vault-action@v3
+        with:
+          url: https://vault.morrislan.net
+          method: approle
+          roleId: ${{ secrets.VAULT_ROLE_ID }}
+          secretId: ${{ secrets.VAULT_SECRET_ID }}
+          secrets: |
+            secrets/data/gitea ci-docker-token | DOCKER_TOKEN ;            
+
+      - name: Login to Registry
+        run: echo ${{ env.DOCKER_TOKEN }} | podman login git.morrislan.net --username morrislan-gitea --password-stdin
+
+      - name: Build
+        run: podman build /workspace/max/maxmorris.io -t git.morrislan.net/max/maxmorris.io:${{ github.sha }}
+
+      - name: Push
+        run: podman push git.morrislan.net/max/maxmorris.io:${{ github.sha }}
+
+      - name: Push latest
+        if: github.ref == 'refs/heads/prod'
+        run: |
+          podman tag git.morrislan.net/max/maxmorris.io:${{ github.sha }} git.morrislan.net/max/maxmorris.io:latest
+          podman push git.morrislan.net/max/maxmorris.io:latest
