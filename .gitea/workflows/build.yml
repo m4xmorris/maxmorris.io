@@ -1,0 +1,35 @@
+name: "Build maxmorris.io"
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  hugo:
+    name: "Hugo"
+    runs-on: ubuntu-latest
+    container:
+      image: hugomods/hugo:exts-0.140.0
+    defaults:
+      run:
+        working-directory: ./hugo
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Hugo Build
+        run: hugo -d public
+      
+      - name: Export HTML
+        uses: actions/upload-artifact@v4
+        with:
+          path: hugo/public
+          if-no-files-found: error
+          retention-days: 7
