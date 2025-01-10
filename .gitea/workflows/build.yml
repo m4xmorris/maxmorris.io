@@ -70,7 +70,7 @@ jobs:
         run: podman push git.morrislan.net/max/maxmorris.io:${{ github.sha }}
 
       - name: Push latest
-        if: github.ref == 'refs/heads/prod'
+        if: github.ref == 'refs/heads/main'
         run: |
           podman tag git.morrislan.net/max/maxmorris.io:${{ github.sha }} git.morrislan.net/max/maxmorris.io:latest
           podman push git.morrislan.net/max/maxmorris.io:latest
