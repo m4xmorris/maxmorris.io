@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: site
-        image: git.morrislan.net/maxmorris.io/site:latest 
+        image: git.morrislan.net/max/maxmorris.io:latest 
         imagePullPolicy: Always
         ports:
         - containerPort: 80
