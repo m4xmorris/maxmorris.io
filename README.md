@@ -1,9 +1,8 @@
 # maxmorris.io
 
 ### My [personal website](https://maxmorris.io) and some IaC for this domain (e.g. mail).
-![terraform](https://git.morrislan.net/MorrisLAN/morrislan/actions/workflows/terraform.yml/badge.svg?branch=prod)
-![podman](https://git.morrislan.net/MorrisLAN/morrislan/actions/workflows/podman.yml/badge.svg?branch=prod)
-![omni](https://git.morrislan.net/MorrisLAN/morrislan/actions/workflows/omni.yml/badge.svg?branch=prod)
+![terraform](https://git.morrislan.net/max/maxmorris.io/actions/workflows/terraform.yml/badge.svg?branch=prod)
+![build](https://git.morrislan.net/MorrisLAN/morrislan/actions/workflows/build.yml/badge.svg?branch=prod)
 
 🔧 **Technologies in Use:**
 
