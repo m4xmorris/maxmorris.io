@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: maxmorris-io
+  namespace: maxmorris-io
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: maxmorris.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: maxmorris-io
+            port:
+              name: http
+  tls:
+  - hosts:
+    - maxmorris.io
+    secretName: maxmorris-io-tls
