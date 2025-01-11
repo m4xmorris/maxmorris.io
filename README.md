@@ -1,5 +1,16 @@
 # maxmorris.io
 
-My [personal website](https://maxmorris.io) built using [Hugo](https://gohugo.io) and [Lynx](https://github.com/jpanther/lynx). aswell as IaC for other parts of my domain (e.g. mail).
+### My [personal website](https://maxmorris.io) and some IaC for this domain (e.g. mail).
+![terraform](https://git.morrislan.net/MorrisLAN/morrislan/actions/workflows/terraform.yml/badge.svg?branch=prod)
+![podman](https://git.morrislan.net/MorrisLAN/morrislan/actions/workflows/podman.yml/badge.svg?branch=prod)
+![omni](https://git.morrislan.net/MorrisLAN/morrislan/actions/workflows/omni.yml/badge.svg?branch=prod)
 
-Deployed using 2 of my Terraform modules, [terraform-digitalocean-static-site](https://github.com/m4xmorris/terraform-digitalocean-static-site) and [terraform-cloudflare-protonmail](https://github.com/m4xmorris/terraform-cloudflare-protonmail).
+🔧 **Technologies in Use:**
+
+- [Gitea](https://about.gitea.com/) - GitOps/CI platform
+- [Terraform](https://www.terraform.io/) - IaC tool
+- [Podman](https://podman.io/) - FOSS toolsuite for building OCI images
+- [Kubernetes (k8s)](https://kubernetes.io/) - workload/container orchestrator
+- [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) - GitOps for k8s
+- [Hugo](https://gohugo.io/) - Super simple static site framework
+- [Lynx Hugo Theme](https://github.com/jpanther/lynx) - Simple Hugo theme with links
