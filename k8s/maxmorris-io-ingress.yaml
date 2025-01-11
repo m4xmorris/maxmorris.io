@@ -18,7 +18,18 @@ spec:
             name: maxmorris-io
             port:
               name: http
+  - host: www.maxmorris.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: maxmorris-io
+            port:
+              name: http
   tls:
   - hosts:
     - maxmorris.io
+    - www.maxmorris.io
     secretName: maxmorris-io-tls
