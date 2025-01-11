@@ -69,6 +69,7 @@ jobs:
         run: podman build /workspace/max/maxmorris.io -t git.morrislan.net/max/maxmorris.io:${{ github.sha }}
 
       - name: Push
+        if: github.ref == 'refs/heads/main'
         run: podman push git.morrislan.net/max/maxmorris.io:${{ github.sha }}
 
       - name: Push latest
