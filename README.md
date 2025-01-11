@@ -2,7 +2,7 @@
 
 ### My [personal website](https://maxmorris.io) and some IaC for this domain (e.g. mail).
 ![terraform](https://git.morrislan.net/max/maxmorris.io/actions/workflows/terraform.yml/badge.svg?branch=main)
-![build](https://git.morrislan.net/MorrisLAN/morrislan/actions/workflows/build.yml/badge.svg?branch=main)
+![build](https://git.morrislan.net/max/maxmorris.io/actions/workflows/build.yml/badge.svg?branch=main)
 
 🔧 **Technologies in Use:**
 
