@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   sources:
-     - repoURL: 'https://git.morrislan.net/max/maxmorris.io'
+     - repoURL: 'https://github.com/m4xmorris/maxmorris.io'
        targetRevision: main
        path: 'k8s'
   destination:
