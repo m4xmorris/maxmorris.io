@@ -15,8 +15,8 @@ spec:
         app: maxmorris-io
     spec:
       containers:
-      - name: site
-        image: git.morrislan.net/max/maxmorris.io:latest 
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
+        - name: site
+          image: ghcr.io/m4xmorris/maxmorris.io:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

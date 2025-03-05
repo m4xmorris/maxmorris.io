@@ -1,0 +1,59 @@
+name: "Build maxmorris.io"
+
+permissions:
+  contents: read
+  packages: write
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-hugo:
+    name: "Build - Hugo"
+    runs-on: ubuntu-latest
+    container:
+      image: hugomods/hugo:exts-0.140.0
+    defaults:
+      run:
+        working-directory: ./hugo
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+      - name: Hugo Build
+        run: hugo -d public
+      - name: Export HTML
+        uses: actions/upload-artifact@v3
+        with:
+          name: html
+          path: hugo/public
+          if-no-files-found: error
+          retention-days: 7
+
+  build-docker:
+    name: "Build - Docker"
+    runs-on: ubuntu-latest
+    needs: build-hugo
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Get HTML
+        uses: actions/download-artifact@v3
+        with:
+          name: html
+          path: hugo/public
+      - name: Build latest
+        id: build-latest
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/m4xmorris/maxmorris.io:latest
+
+# TODO - add deploy-tofu after migration to OpenTofu
