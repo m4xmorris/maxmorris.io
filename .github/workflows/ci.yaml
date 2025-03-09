@@ -1,4 +1,4 @@
-name: "Build maxmorris.io"
+name: "CI"
 
 permissions:
   contents: read
